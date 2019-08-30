@@ -1,31 +1,41 @@
 <div class="container mr-50% bg-dark text-white col-6 mt-4"> 
-    <form (ngSubmit) = "onsubmit()">
+    <!--Variavel de template #fc, só funciona no html-->
+    <form (ngSubmit)= "onsubmit(fc)" #fc=ngForm  >
         <legend>Cadastro</legend>
             <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control col-8"   placeholder="Digite email" [(ngModel)]="usuario.email" name="email">
+            <input type="email" class="form-control col-8"   placeholder="Digite email" [(ngModel)]="usuario.email" name="email" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
 
             <div class="form-group">
                     <label for="exampleInputEmail1">Nome</label>
-                    <input type="email" class="form-control col-8" placeholder="Digite nome" [(ngModel)]="usuario.nome" name="nome">
+                    <input type="email" class="form-control col-8" placeholder="Digite nome" [(ngModel)]="usuario.nome" name="nome" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
 
+            
+            
+            
             <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input type="password" class="form-control col-8"  placeholder="Senha" [(ngModel)]="usuario.pws" name="pws">
+                    <label for=""></label>
+                    <input type="password" class="form-control col-8"  placeholder="Senha" [(ngModel)]="usuario.pws" name="pws" 
+                    #pws = "ngModel" minlength="6" required>
+                    <small  class="form-text text-danger font-weight-bold" *ngIf="pws.invalid && pws.dirty">Password is too small</small>
             </div>
             <div class="form-group">
-                    <label for="exampleInputPassword1">Confirmar senha</label>
-                    <input type="password" class="form-control col-8"  placeholder="Confirmar senha" >
+                    <label for=""></label>
+                    <input type="password" class="form-control col-8"  placeholder="Confirmar senha" name="conf" (ngModel)="conf"
+                    #conf="ngModel" required>
+                    <small  class="form-text text-danger font-weight-bold" 
+                    *ngIf="pws.value != conf.value && conf.dirty">Passwords are different</small>
             </div>
 
             <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info" [disabled] = "fc.invalid ">Submit</button>
+            <button type="reset" class="btn btn-info ml-4" routerLink="/">Cancel</button>
     </form>
 </div>
