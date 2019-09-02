@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ana",
+      "email": "ana@email.com",
+      "pws": "11111"
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "email": "pedro@email.com",
+      "pws": "22222"
+    },
+    {
+      "email": "andrels_spfc@yahoo.combr",
+      "nome": "AndreLS",
+      "pws": "123456",
+      "id": 3
+    },
+    {
+      "email": "zezin@zezin.com",
+      "nome": "JUSÉ Aumeidda",
+      "pws": "joseal",
+      "id": 4
+    },
+    {
+      "email": "maranhao_andre@hotmail.com",
+      "nome": "Maravilha",
+      "pws": "maravilha",
+      "id": 5
+    },
+    {
+      "email": "vale@apenaverdenovo.com",
+      "nome": "qwqwqw",
+      "pws": "andreluis87",
+      "id": 6
+    },
+    {
+      "email": "aaddasdasd",
+      "nome": "adasdadadas",
+      "pws": "2222222",
+      "id": 7
+    },
+    {
+      "email": "qqqqq",
+      "nome": "qqqqqq",
+      "pws": "eeeeeee",
+      "id": 8
+    },
+    {
+      "email": "rrrrrrrr",
+      "nome": "rrrrrrrrrr",
+      "pws": "rrrrrrr",
+      "id": 9
+    }
+  ]
+}
