@@ -1,0 +1,9 @@
+<div class="row mt-5" *ngIf="produtos | async as prod">
+    <div class="card col-2 m-2 p-0 " *ngFor="let p of prod">
+        <h3 class=" text-primary nome"> {{p.nome}}</h3>
+        <p class="desc"><strong>{{p.descricao}}</strong></p>
+        <p class="quant"><strong>{{p.quant}}</strong></p>
+        <p class="valor"><strong>{{p.valor | currency: "BRL"}}</strong></p>
+        <p class="ativo"><strong>{{p.ativo}}</strong></p>
+    </div>
+</div>

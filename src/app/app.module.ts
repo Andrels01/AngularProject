@@ -8,14 +8,18 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './pages/nav/nav.component';
 import { AddUsuarioComponent } from './pages/add-usuario/add-usuario.component';
 import {FormsModule} from '@angular/forms';
-import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component'
+import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component';
+import { ListProdutoComponent } from './pages/list-produto/list-produto.component';
+import { AddProdutoComponent } from './pages/add-produto/add-produto.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     AddUsuarioComponent,
-    ListUsuarioComponent
+    ListUsuarioComponent,
+    ListProdutoComponent,
+    AddProdutoComponent
   ],
   imports: [
     BrowserModule,

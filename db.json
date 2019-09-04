@@ -6,6 +6,55 @@
       "author": "typicode"
     }
   ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Sansung G4",
+      "descricao": "Tela de 14'', preto, 1TB memoria RAM",
+      "valor": "15.000",
+      "quantidade": "10",
+      "ativo": true
+    },
+    {
+      "nome": "Xiaomi MI MI MI",
+      "descricao": "Melhor que Iphone",
+      "ativo": true,
+      "valor": 900,
+      "id": 2
+    },
+    {
+      "ativo": true,
+      "nome": "LG megaFiasco",
+      "descricao": "tela de 4''",
+      "valor": 1200,
+      "quant": 23,
+      "id": 3
+    },
+    {
+      "ativo": true,
+      "nome": "Sansung MI7",
+      "descricao": "tela de 4''",
+      "valor": 2300,
+      "quant": 13,
+      "id": 4
+    },
+    {
+      "ativo": true,
+      "nome": "EWEWE",
+      "descricao": "WEWEWE",
+      "valor": 13000,
+      "quant": 222,
+      "id": 5
+    },
+    {
+      "ativo": true,
+      "nome": "Nokia 3525",
+      "descricao": "tela de 12mg",
+      "valor": 15500,
+      "quant": 3,
+      "id": 6
+    }
+  ],
   "usuarios": [
     {
       "id": 1,
