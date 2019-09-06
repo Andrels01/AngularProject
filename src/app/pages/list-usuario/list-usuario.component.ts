@@ -11,12 +11,14 @@ import { Usuario } from '../../model/usuario';
 export class ListUsuarioComponent implements OnInit {
 protected usuarios: any
 
+
   constructor(
   public usuarioService: UsuarioService,
   ) { }
 
   ngOnInit() {
     this.usuarios = this.usuarioService.getAll();
+    
   }
 
 }

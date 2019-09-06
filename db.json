@@ -109,6 +109,18 @@
       "nome": "rrrrrrrrrr",
       "pws": "rrrrrrr",
       "id": 9
+    },
+    {
+      "endereco": {
+        "cep": "21044178",
+        "localidade": "Rio de Janeiro",
+        "uf": "Rio de Janeiro",
+        "logradouro": "Rusa do carmo"
+      },
+      "email": "maranhao_andre@hotmail.com",
+      "nome": "AndreLS",
+      "pws": "123456",
+      "id": 10
     }
   ]
 }

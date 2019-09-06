@@ -13,6 +13,8 @@
                     <input type="email" class="form-control col-8" placeholder="Digite nome" [(ngModel)]="usuario.nome" name="nome" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
+               
+            <app-endereco [endereco] = endereco></app-endereco>    
 
             
             
@@ -39,4 +41,4 @@
             <button type="reset" class="btn btn-info ml-4" routerLink="/">Cancel</button>
     </form>
 </div>
-<app-list-usuario></app-list-usuario>
+<app-list-usuario ></app-list-usuario>

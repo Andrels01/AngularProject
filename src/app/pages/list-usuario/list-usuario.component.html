@@ -5,11 +5,16 @@
             <th> ID </th>
             <th> Nome</th>
             <th> E-mail</th>
+            <th> CEP</th>
+            <th> Logradouro </th>
+            <th> Localidade </th>
+            <th> Bairro</th>
         </tr>
         <tr *ngFor="let u of users">
            <td>{{u.id}}</td>
            <td>{{u.nome}}</td>
            <td>{{u.email}}</td>
+           
         </tr>
     </table>
 

@@ -34,5 +34,8 @@ export class ProdutoService {
    getAll(){
      return this.http.get(this.db + "produtos");
    }
-    }
+
+   
+   }
+   
 
