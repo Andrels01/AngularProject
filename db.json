@@ -1,0 +1,126 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Sansung G4",
+      "descricao": "Tela de 14'', preto, 1TB memoria RAM",
+      "valor": "15.000",
+      "quantidade": "10",
+      "ativo": true
+    },
+    {
+      "nome": "Xiaomi MI MI MI",
+      "descricao": "Melhor que Iphone",
+      "ativo": true,
+      "valor": 900,
+      "id": 2
+    },
+    {
+      "ativo": true,
+      "nome": "LG megaFiasco",
+      "descricao": "tela de 4''",
+      "valor": 1200,
+      "quant": 23,
+      "id": 3
+    },
+    {
+      "ativo": true,
+      "nome": "Sansung MI7",
+      "descricao": "tela de 4''",
+      "valor": 2300,
+      "quant": 13,
+      "id": 4
+    },
+    {
+      "ativo": true,
+      "nome": "EWEWE",
+      "descricao": "WEWEWE",
+      "valor": 13000,
+      "quant": 222,
+      "id": 5
+    },
+    {
+      "ativo": true,
+      "nome": "Nokia 3525",
+      "descricao": "tela de 12mg",
+      "valor": 15500,
+      "quant": 3,
+      "id": 6
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Ana",
+      "email": "ana@email.com",
+      "pws": "11111"
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "email": "pedro@email.com",
+      "pws": "22222"
+    },
+    {
+      "email": "andrels_spfc@yahoo.combr",
+      "nome": "AndreLS",
+      "pws": "123456",
+      "id": 3
+    },
+    {
+      "email": "zezin@zezin.com",
+      "nome": "JUSÉ Aumeidda",
+      "pws": "joseal",
+      "id": 4
+    },
+    {
+      "email": "maranhao_andre@hotmail.com",
+      "nome": "Maravilha",
+      "pws": "maravilha",
+      "id": 5
+    },
+    {
+      "email": "vale@apenaverdenovo.com",
+      "nome": "qwqwqw",
+      "pws": "andreluis87",
+      "id": 6
+    },
+    {
+      "email": "aaddasdasd",
+      "nome": "adasdadadas",
+      "pws": "2222222",
+      "id": 7
+    },
+    {
+      "email": "qqqqq",
+      "nome": "qqqqqq",
+      "pws": "eeeeeee",
+      "id": 8
+    },
+    {
+      "email": "rrrrrrrr",
+      "nome": "rrrrrrrrrr",
+      "pws": "rrrrrrr",
+      "id": 9
+    },
+    {
+      "endereco": {
+        "cep": "21044178",
+        "localidade": "Rio de Janeiro",
+        "uf": "Rio de Janeiro",
+        "logradouro": "Rusa do carmo"
+      },
+      "email": "maranhao_andre@hotmail.com",
+      "nome": "AndreLS",
+      "pws": "123456",
+      "id": 10
+    }
+  ]
+}

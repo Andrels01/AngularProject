@@ -1,0 +1,39 @@
+<div class="container mr-50% bg-dark text-white col-6 mt-4"> 
+        <!--Variavel de template #fc, só funciona no html-->
+        <form (ngSubmit)= "onsubmit(fc)" #fc=ngForm  >
+            <legend>Cadastro de Produtos</legend>
+                <div class="form-group">
+                    <label for="">Nome:</label>
+                    <input type="text" class="form-control col-8"   placeholder="Nome do produto" 
+                    [(ngModel)]="produto.nome" name="nome" required>
+                </div>
+    
+                <div class="form-group">
+                        <label for="">Descrição:</label>
+                        <input type="text" class="form-control col-8" placeholder="Descrição do produto" 
+                        [(ngModel)]="produto.descricao" name="desc" required>
+                        
+                </div>
+                
+                
+                <div class="form-group">
+                        <label for="">Quantidade</label>
+                        <input type="number" class="form-control col-8"  placeholder="Quantidade" 
+                        [(ngModel)]="produto.quant" name="quant" required>
+
+                </div>
+
+                <div class="form-group">
+                        <label for="">Valor</label>
+                        <input type="number" class="form-control col-8"  placeholder="Valor do produto" name="valor" 
+                        (ngModel)="valor" required>
+                </div>   
+                
+                
+                
+                <button type="submit" class="btn btn-info" >Submit</button>
+                <button type="reset" class="btn btn-info ml-4" routerLink="/">Cancel</button>
+        </form>
+    </div>
+    <app-list-produto></app-list-produto>
+    

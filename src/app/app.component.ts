@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from './model/usuario';
+import {Produto} from './model/produto';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,8 @@ import { Usuario } from './model/usuario';
 })
 export class AppComponent {
   title = 'lojaAngular';
-  usuario: Array<Usuario>
+  usuarios: Array<Usuario>
+  produtos: Array<Produto>
 
   //usuarios: Array<Usuario> = [
     //{uid:"1", nome: "Ana", email:"ana@email.com", pws:"11111"},
