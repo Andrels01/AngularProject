@@ -1,6 +1,7 @@
-<div class="row mt-5" *ngIf="produtos | async as prod">
-    <div class="card col-2 m-2 p-0 " *ngFor="let p of prod">
-        <h3 class=" text-primary nome"> {{p.nome}}</h3>
+<div class="row ml-6" style="padding-left: 13%;" *ngIf="produtos | async as prod">
+    <div class="card col-2 m-4 p-0 bg-info text-center" *ngFor="let p of prod">
+        <h3 class=" text-dark nome"> {{p.nome}}</h3>
+        <img style="width: 80%;height: 80px;" class="ml-3" src="../../../assets/img/{{p.nome}}.jpg" alt="">
         <p class="desc"><strong>{{p.descricao}}</strong></p>
         <p class="quant"><strong>{{p.quant}}</strong></p>
         <p class="valor"><strong>{{p.valor | currency: "BRL"}}</strong></p>

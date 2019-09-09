@@ -9,14 +9,14 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "Sansung G4",
+      "nome": "moto",
       "descricao": "Tela de 14'', preto, 1TB memoria RAM",
       "valor": "15.000",
       "quantidade": "10",
       "ativo": true
     },
     {
-      "nome": "Xiaomi MI MI MI",
+      "nome": "moto2",
       "descricao": "Melhor que Iphone",
       "ativo": true,
       "valor": 900,
@@ -24,7 +24,7 @@
     },
     {
       "ativo": true,
-      "nome": "LG megaFiasco",
+      "nome": "moto3",
       "descricao": "tela de 4''",
       "valor": 1200,
       "quant": 23,
@@ -32,7 +32,7 @@
     },
     {
       "ativo": true,
-      "nome": "Sansung MI7",
+      "nome": "moto4",
       "descricao": "tela de 4''",
       "valor": 2300,
       "quant": 13,
@@ -40,7 +40,7 @@
     },
     {
       "ativo": true,
-      "nome": "EWEWE",
+      "nome": "nokia",
       "descricao": "WEWEWE",
       "valor": 13000,
       "quant": 222,
@@ -48,11 +48,34 @@
     },
     {
       "ativo": true,
-      "nome": "Nokia 3525",
+      "nome": "nokia2",
       "descricao": "tela de 12mg",
       "valor": 15500,
       "quant": 3,
       "id": 6
+    },
+    {
+      "ativo": true,
+      "nome": "nokia3",
+      "descricao": "tela de 12mg",
+      "valor": 15500,
+      "quant": 3,
+      "id": 6
+    },
+    {
+      "ativo": true,
+      "nome": "nokia4",
+      "descricao": "tela de 12mg",
+      "valor": 15500,
+      "quant": 3,
+      "id": 6
+    },
+    {
+      "ativo": true,
+      "nome": "xiaomi",
+      "descricao": "Produto para as feministas",
+      "quant": 3,
+      "id": 7
     }
   ],
   "usuarios": [
