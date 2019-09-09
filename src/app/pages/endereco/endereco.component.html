@@ -1,34 +1,32 @@
+<div class="form-group">
+        <label for="exampleInputEmail1"></label>
+        <input type="text" class="form-control" minlength="7" placeholder="CEP" [(ngModel)]="cep" name="cep" minlength="7" maxlength="9" #c="ngModel" (keyup)="buscaCep($event)" required>
+        <small class="form-text text-danger" *ngIf="c.invalid">CEP invalido</small>
+        
 
-    
-    <div class="form-group">
-      <label for="exampleInputEmail1"></label>
-      <input type="text" class="form-control"  placeholder="CEP" [(ngModel)] = "endereco.cep" name="cep">
-      <small  class="form-text text-muted"></small>
-    </div>
+</div>
 
-    <div class="form-group">
-      <label for="exampleInputPassword1"></label>
-      <input type="password" class="form-control"  placeholder="Endereço" name="logradouro" [(ngModel)] = "endereco.logradouro">
-      <small  class="form-text text-muted"></small>
-    </div>
+<div class="form-group">
+        <label for="exampleInputPassword1"></label>
+        <input type="text" class="form-control" placeholder="Endereço" name="logradouro" 
+        [(ngModel)]="logradouro">
+        <small class="form-text text-muted"></small>
+</div>
 
-    <div class="form-group">
-            <label for="exampleInputPassword1"></label>
-            <input type="text" class="form-control"  placeholder="Bairro" name="bairro" [(ngModel)] = "endereco.bairro">
-            <small  class="form-text text-muted"></small>
-    </div>
+<div class="form-group">
+        <label for="exampleInputPassword1"></label>
+        <input type="text" class="form-control" placeholder="Bairro" name="bairro" [(ngModel)]="bairro">
+        <small class="form-text text-muted"></small>
+</div>
 
-    <div class="form-group">
-            <label for="exampleInputPassword1"></label>
-            <input type="text" class="form-control"  placeholder="Cidade" name="localidade" [(ngModel)] = "endereco.localidade">
-            <small  class="form-text text-muted"></small>
-    </div>
+<div class="form-group">
+        <label for="exampleInputPassword1"></label>
+        <input type="text" class="form-control" placeholder="Cidade" name="localidade" [(ngModel)]="localidade">
+        <small class="form-text text-muted"></small>
+</div>
 
-    <div class="form-group">
-            <label for="exampleInputPassword1"></label>
-            <input type="text" class="form-control"  placeholder="Estado" name="uf" [(ngModel)] = "endereco.uf">
-            <small  class="form-text text-muted"></small>
-    </div>
-    
-    
-  
+<div class="form-group">
+        <label for="exampleInputPassword1"></label>
+        <input type="text" class="form-control" placeholder="Estado" name="uf" [(ngModel)]="uf">
+        <small class="form-text text-muted"></small>
+</div>

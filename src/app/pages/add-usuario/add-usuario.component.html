@@ -16,14 +16,14 @@
             <div class="form-group" [class.has-error] = "name.invalid && name.touched" 
                     [class.has-success] = "name.valid">
                     <label for="nome" class="control-label">Nome</label>
-               gi     <input required id="nome" name="nome" [(ngModel)]="usuario.nome" 
+                    <input required id="nome" name="nome" [(ngModel)]="usuario.nome" 
                     type="text" class="form-control col-8" placeholder="Digite nome"  
                      #name="ngModel" >
                     <span class="help-block" *ngIf="name.invalid && name.touched">Name is required</span>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
 
-            
+            <app-endereco [endereco] = endereco></app-endereco>
             
             
             <div class="form-group">

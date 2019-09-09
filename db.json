@@ -76,6 +76,13 @@
       "descricao": "Produto para as feministas",
       "quant": 3,
       "id": 7
+    },
+    {
+      "ativo": true,
+      "nome": "iphone",
+      "descricao": "para ricos",
+      "quant": 50,
+      "id": 8
     }
   ],
   "usuarios": [
@@ -144,6 +151,24 @@
       "nome": "AndreLS",
       "pws": "123456",
       "id": 10
+    },
+    {
+      "endereco": {
+        "erro": false
+      },
+      "email": "andrels_spfc@yahoo.combr",
+      "nome": "Ardiloso",
+      "pws": "andreluis87",
+      "id": 11
+    },
+    {
+      "endereco": {
+        "erro": false
+      },
+      "email": "andrels_spfc@yahoo.combr",
+      "nome": "Als",
+      "pws": "Andreluis887",
+      "id": 12
     }
   ]
 }
