@@ -1,4 +1,4 @@
-export class Endereco   {
+export class Endereco {
     cep: string;
     logradouro: string;
     complemento: string;
@@ -9,5 +9,5 @@ export class Endereco   {
     ibge: string;
     gia: string;
 
-    erro:boolean = false
-  }
+    erro: boolean = false;
+}

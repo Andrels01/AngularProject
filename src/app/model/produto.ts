@@ -1,8 +1,8 @@
 export class Produto {
-    uid: number;
-    nome: String;
-    descricao: String;
-    quant:number;
+    id: number;
+    nome: string;
+    descricao: string;
+    quant: number;
     valor: number;
     ativo: boolean = true;
 }

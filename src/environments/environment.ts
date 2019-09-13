@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-  serverAPI: "http://localhost:3000/"
+  serverAPI:"http://localhost:3000/",
+   firebaseConfig: {
+    apiKey: "AIzaSyBLaXHzv-GHbgOGwiNAbC4BQBJ2IQQ1BcQ",
+    authDomain: "lojaangularals.firebaseapp.com",
+    databaseURL: "https://lojaangularals.firebaseio.com",
+    projectId: "lojaangularals",
+    storageBucket: "",
+    messagingSenderId: "944349530489",
+    appId: "1:944349530489:web:9922353858d6e0eb3f07a8"
+  }
 };
 
 /*

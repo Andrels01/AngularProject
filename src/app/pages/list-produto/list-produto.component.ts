@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../../model/produto';
-import { ProdutoService } from '../../services/produto.service';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-list-produto',
@@ -8,10 +7,11 @@ import { ProdutoService } from '../../services/produto.service';
   styleUrls: ['./list-produto.component.css']
 })
 export class ListProdutoComponent implements OnInit {
-protected produtos:any
+
+  protected produtos:any;
 
   constructor(
-    public produtoService: ProdutoService
+    public produtoService: ProdutoService,
   ) { }
 
   ngOnInit() {

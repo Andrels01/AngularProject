@@ -1,51 +1,35 @@
-<div class="container mr-50% bg-dark text-white col-6 mt-4"> 
-    <!--Variavel de template #fc, só funciona no html-->
-    <form (ngSubmit)= "onsubmit(fc)" #fc=ngForm  >
-        <legend>Cadastro</legend>
-            
-            <div class="form-group" [class.has-error] = "email.invalid && email.touched">                
-                <label for="email" class="control-label">Email</label>                
-                <input id="email" required [email] = "usuario.email !== ''" name="email" [(ngModel)]="usuario.email" 
-                    type="text" class="form-control col-8"  #email = "ngModel" placeholder="Digite email">
-                        <span class="help-block" *ngIf="email.errors?.required && email.touched">Email is required</span><br>
-                        <span class="help-block" *ngIf="email.errors?.email && email.touched">Email is invalid</span>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
+<section class="container">
+    <form #fc=ngForm (ngSubmit) = "onsubmit(fc)">
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="usuario.nome" name="nome" required>
+            <small class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="email" class="form-control" placeholder="E-mail" [(ngModel)]="usuario.email" name="email" required>
+            <small class="form-text text-muted"></small>
+        </div>
 
-
-            <div class="form-group" [class.has-error] = "name.invalid && name.touched" 
-                    [class.has-success] = "name.valid">
-                    <label for="nome" class="control-label">Nome</label>
-                    <input required id="nome" name="nome" [(ngModel)]="usuario.nome" 
-                    type="text" class="form-control col-8" placeholder="Digite nome"  
-                     #name="ngModel" >
-                    <span class="help-block" *ngIf="name.invalid && name.touched">Name is required</span>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-
-            <app-endereco [endereco] = endereco></app-endereco>
-            
-            
+        <div *ngIf = "id == null">
             <div class="form-group">
-                    <label for=""></label>
-                    <input type="password" class="form-control col-8"  placeholder="Senha" [(ngModel)]="usuario.pws" name="pws" 
-                    #pws = "ngModel" minlength="6" required>
-                    <small  class="form-text text-danger font-weight-bold" *ngIf="pws.invalid && pws.dirty">Password is too small</small>
+                <label for=""></label>
+                <input type="password" class="form-control"  placeholder="Senha" [(ngModel)]="usuario.pws" name="pws" #pws="ngModel" minlength="6" required>
+                <small class="form-text text-danger font-weight-bold" *ngIf="pws.invalid && pws.dirty">Senha muito curta</small>
             </div>
             <div class="form-group">
-                    <label for=""></label>
-                    <input type="password" class="form-control col-8"  placeholder="Confirmar senha" name="conf" (ngModel)="conf"
-                    #conf="ngModel" required>
-                    <small  class="form-text text-danger font-weight-bold" 
-                    *ngIf="pws.value != conf.value && conf.dirty">Passwords are different</small>
+                <label for=""></label>
+                <input type="password" class="form-control" placeholder="Confirmar senha" #conf="ngModel" name="conf" (ngModel)="conf" required>
+                <small class="form-text text-danger font-weight-bold" *ngIf="pws.value != conf.value">Senhas diferentes</small>
             </div>
+        </div>
 
-            <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-info" [disabled] = "fc.invalid ">Submit</button>
-            <button type="reset" class="btn btn-info ml-4" routerLink="/">Cancel</button>
+        <app-endereco [endereco]=usuario.endereco></app-endereco>
+     
+        <div class="form-group text-right">
+            <button type="submit" class="btn btn-primary" [disabled]="fc.invalid || pws.value != conf.value" *ngIf = "">Salvar</button>
+            <button type="reset" class="btn btn-primary ml-2" routerLink="/">Cancelar</button>            
+        </div>
     </form>
-</div>
-<app-list-usuario ></app-list-usuario>
+</section>
+<app-list-usuario></app-list-usuario>

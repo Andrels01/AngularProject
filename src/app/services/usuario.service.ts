@@ -1,30 +1,56 @@
 import { Injectable } from '@angular/core';
-//chamando a classe que chama os comando http
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 import { Usuario } from '../model/usuario';
 import { environment } from '../../environments/environment';
-
+import{map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
-  usuarios: Array<Usuario> = [
-   
-  ]
+
+  // usuarios: Array<Usuario> = [
+  //   { uid: "1", nome: "Ana", email: "ana@email.com", pws: "111111" },
+  //   { uid: "2", nome: "Pedro", email: "pedro@email.com", pws: "222222" },
+  // ];
 
   protected db = environment.serverAPI;
 
   constructor(
-    //criandoa variavel = primeiro o nome da variavel : nome da classe
-    protected http:HttpClient
-   ) { }
+    protected http: HttpClient,
+    protected dbfire: AngularFireDatabase
+  ) { }
 
-  save(usuario:Usuario){
-    return this.http.post(this.db + "usuarios", usuario);
+  save(usuario: Usuario) {
+    //this.usuarios.push(usuario);
+    //return this.http.post(this.db + "usuarios", usuario);
+    return this.dbfire.list("usuarios").push(usuario);
   }
-  getAll(){
-    return this.http.get(this.db + "usuarios");
+
+  getAll() {
+    //return this.http.get(this.db + "usuarios");
+    //return this.dbfire.list<Usuario>("usuarios").valueChanges();
+      return this.dbfire.list<Usuario>("usuarios").snapshotChanges()
+      .pipe(
+        map(changes =>
+        changes.map(c => ({ key: c.payload.key,
+        ...c.payload.val()}))
+      )
+    );
   }
+
+  get(key){
+    return this.dbfire.object<Usuario>("usuarios/" + key).valueChanges();
+  }
+  
+  update(usuario:Usuario, key){
+    return this.dbfire.object<Usuario>("usuarios/" +key).update(usuario);
+  }
+  
+  delete(key){
+    return this.dbfire.object("usuarios/"+key).remove();
+  }
+
 }
