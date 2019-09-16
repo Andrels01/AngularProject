@@ -10,11 +10,13 @@ import Swal from 'sweetalert2';
   templateUrl: './add-usuario.component.html',
   styleUrls: ['./add-usuario.component.css']
 })
+
 export class AddUsuarioComponent implements OnInit {
 
   protected usuario: Usuario = new Usuario;
   // @Input() usuarios:Usuario[] = []
   private id: string = null;
+  
   constructor(
     public usuarioService: UsuarioService,
     protected router: Router,

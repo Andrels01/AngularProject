@@ -18,6 +18,7 @@ import { EnderecoComponent } from './pages/add-endereco/endereco.component';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { PerfilProdutoComponent } from './pages/perfil-produto/perfil-produto.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { environment } from '../environments/environment';
     PageHeaderComponent,
     PageFooterComponent,
     PageNavComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    PerfilProdutoComponent
   ],
   imports: [
     BrowserModule,

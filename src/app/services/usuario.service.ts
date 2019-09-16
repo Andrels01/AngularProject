@@ -19,7 +19,7 @@ export class UsuarioService {
   protected db = environment.serverAPI;
 
   constructor(
-    protected http: HttpClient,
+    //protected http: HttpClient,
     protected dbfire: AngularFireDatabase
   ) { }
 

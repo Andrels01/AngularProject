@@ -14,14 +14,21 @@
         </tr>
     </table> -->
     <div class="row" *ngIf="produtos | async as prods">
-        <div class="card col-3 m-1 p-0" *ngFor="let p of prods">
+        <div class="card col-4 m-1 p-0" routerLink = "perfilProduto/{{p.key}}" *ngFor="let p of prods">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
                 <h5 class="card-title">{{p.nome}}</h5>
                 <p class="card-text">{{p.descricao}}</p>
             </div>
+            <div class="text-center">
+                <img style="width: 100%;" class="rounded mx-auto d-block" src="../../../assets/img/{{p.nome}}.jpg">
+            </div>
             <div class="card-footer bg-transparent">
                 <a href="#" class="btn btn-danger btn-block">{{p.valor | currency:'BRL'}}</a>
+            </div>
+            <div>
+                <input class="m-2" type="button" name="atualizar" (click) = "update(p)"value="atualizar" style="width: 100px; ">
+                <input type="button" name="apagar" value="apagar" (click) = "apagar(p)" style="width: 100px">
             </div>
         </div>
     </div>
